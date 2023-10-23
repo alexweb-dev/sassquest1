@@ -1,0 +1,89 @@
+.precious {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  
+    .twinRings {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+  
+      .twinRing {
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        border: 10px solid #ff5733;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #ff5733;
+        margin-right: 10px;
+      }
+  
+      p {
+        margin-right: 10px;
+        font-size: 3.5rem;
+        
+      }
+    }
+  
+    .bigRings {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+  
+      .bigRing {
+        width: 150px;
+        height: 150px;
+        background: transparent;
+        border: 15px solid yellow;
+        border-radius: 50%;
+        box-shadow: 0 0 10px yellow;
+        margin-right: 10px;
+      }
+  
+      p {
+        margin-right: 10px;
+        font-size: 3.5rem;
+      }
+    }
+  
+    .forRings {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+  
+      @for $i from 1 through 6 {
+        $ring-size: 60px + 20px * $i;
+        $border-size: 2.4px + 0.8px * $i;
+  
+        .forRing-#{$i} {
+          width: $ring-size;
+          height: $ring-size;
+          background: transparent;
+          border: $border-size solid black;
+          border-radius: 50%;
+          box-shadow: 0 0 10px black;
+          margin-right: -6%;
+        }
+      }
+    }
+  
+    p {
+      margin-top: 20px;
+      font-size: 3.5rem;
+    }
+  }
+  
+
+.precious p {
+  margin-top: 20px;
+  font-size: 3.5rem;
+}
